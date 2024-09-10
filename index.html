@@ -148,111 +148,130 @@
     
 
     <title>Portfolio Skills Section</title>
-    <style>
-            
-             /* Section Styles */
-              .certifications {
-               padding: 40px 20px;
-               max-width: 1200px;
-               margin: 0 auto;
-             }
 
-            /* Heading Styles */
-              .heading {
-                text-align: center;
-                font-size: 32px;
-                margin-bottom: 20px;
-                color: #04478b;
-                position: relative;
-             }
+<style>
+    /* Section Styles */
+    .certifications {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
+    /* Heading Styles */
+    .heading {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #04478b;
+        position: relative;
+    }
 
-        .heading::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: #3498db;
-            margin: 10px auto;
-            border-radius: 2px;
+    .heading::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: #3498db;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
+
+    /* Skills Block Styles */
+    .skills-block {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* Skill Category Styles */
+    .skill-category {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(164, 33, 33, 0.3);
+        transition: transform 0.3s ease;
+        border-left: 5px solid #3498db;
+    }
+
+    .skill-category:hover {
+        transform: translateY(-10px);
+    }
+
+    .skill-heading {
+        font-size: 22px;
+        color: #2980b9;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+    }
+
+    /* Skill List Styles */
+    .skill-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .skill-list li {
+        font-size: 16px;
+        margin: 8px 0;
+        position: relative;
+        padding-left: 20px;
+        color: #000000;
+    }
+
+    .skill-list li::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-size: 14px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .heading {
+            font-size: 28px;
         }
 
-        /* Skills Block Styles */
         .skills-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-
-        /* Skill Category Styles */
-        .skill-category {
-            background: #ffffff;
-            
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgb(164, 33, 33);
-            transition: transform 0.3s ease;
-            border-left: 5px solid #3498db;
-
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .skill-heading {
-            font-size: 22px;
-            color: #2980b9;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            font-size: 20px;
         }
 
-        /* Skill List Styles */
-        .skill-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .skill-category {
+            padding: 15px;
         }
 
         .skill-list li {
-            font-size: 16px;
-            margin: 8px 0;
-            position: relative;
-            padding-left: 20px;
-            color: #000000;
-        }
-
-
-
-        .skill-list li::before {
-            content: '✔';
-            position: absolute;
-            left: 0;
-            color: #3498db;
             font-size: 14px;
         }
+    }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .heading {
-                font-size: 28px;
-            }
-
-            .skill-heading {
-                font-size: 20px;
-            }
-
-            .skill-category {
-                padding: 15px;
-            }
-
-            .skill-list li {
-                font-size: 14px;
-            }
+    @media (max-width: 480px) {
+        .heading {
+            font-size: 24px;
         }
-    </style>
+
+        .skill-heading {
+            font-size: 18px;
+        }
+
+        .skill-category {
+            padding: 10px;
+            box-shadow: 0 3px 6px rgba(164, 33, 33, 0.2);
+        }
+
+        .skill-list li {
+            font-size: 13px;
+        }
+    }
+</style>
+
 
 
 
@@ -262,7 +281,7 @@
         <div class="skills-block">
             <!-- Programming Languages -->
             <div class="skill-category">
-                <h3 class="skill-heading">Programming Languages</h3>
+                <h3 class="skill-heading">PLs</h3>
                 <ul class="skill-list">
                     <li>Python</li>
                     <li>Java</li>
@@ -274,17 +293,18 @@
                     <li>SQL/MySQL</li>
                 </ul>
             </div>
+            
 
             <!-- Data Analysis Skills -->
             <div class="skill-category">
-                <h3 class="skill-heading">Data Analysis Skills</h3>
+                <h3 class="skill-heading">Data Analysis</h3>
                 <ul class="skill-list">
-                    <li>Exploratory Data Analysis (EDA)</li>
-                    <li>Data Cleaning and Preprocessing</li>
-                    <li>Statistical Analysis</li>
-                    <li>Data Visualization</li>
+                    <li>EDA</li>
+                    <li>Data Prep-Clean</li>
+                    <li>Stat Analysis</li>
+                    <li>Data Vis</li>
                     <li>Data Mining</li>
-                    <li>Machine Learning</li>
+                    <li>ML</li>
                 </ul>
             </div>
 
@@ -293,11 +313,11 @@
                 <h3 class="skill-heading">Tools</h3>
                 <ul class="skill-list">
                     <li>Power BI</li>
-                    <li>IBM Cognos Analytics</li>
+                    <li>IBM Cognos</li>
                     <li>Excel</li>
-                    <li>Google Data Studio</li>
-                    <li>Jupyter Notebook</li>
-                    <li>Google Analytics</li>
+                    <li>GData Studio</li>
+                    <li>Jupyter NB</li>
+                    <li>GAnalytics</li>
                     <li>Tableau</li>
                     <li>Git/GitHub</li>
                 </ul>
@@ -305,14 +325,14 @@
 
             <!-- Python libraries -->
             <div class="skill-category">
-                <h3 class="skill-heading">Python libraries</h3>
+                <h3 class="skill-heading">libraries</h3>
                 <ul class="skill-list">
                     <li>Pandas</li>
                     <li>NumPy</li>
                     <li>Matplotlib</li>
                     <li>Seaborn</li>
                     <li>SciPy</li>
-                    <li>Scikit-learn</li>
+                    <li>sklearn</li>
                     <li>Statsmodels</li>
                     <li>BeautifulSoup</li>
                     <!-- <li>TensorFlow/PyTorch </li> -->
@@ -320,13 +340,12 @@
             </div>
             <!-- Cloud Computing -->
             <div class="skill-category">
-                <h3 class="skill-heading">Cloud Computing</h3>
+                <h3 class="skill-heading">C-Comp</h3>
                 <ul class="skill-list">
                     <li>Microsoft Azure</li>
                     <!-- <li>AWS (Amazon Web Services)</li> -->
-                    <li>Google Cloud Platform (GCP)</li>
-                    <li>Cloud Storage</li>
-                    <li>Virtual Machines</li>
+                    <li>G Cloud</li>
+                    <li>VMs</li>
                 </ul>
             </div>
 
@@ -335,7 +354,7 @@
                 <h3 class="skill-heading">Soft Skills</h3>
                 <ul class="skill-list">
                     <li>Leadership</li>
-                    <li>Critical Thinking</li>
+                    <li>Crit Think</li>
                     <li>Adaptability</li>
                     <li>Teamwork</li>
                     <li>Creativity</li>
@@ -349,11 +368,11 @@
                 <ul class="skill-list">
                     <li>MySQL</li>
                     <!-- <li>PostgreSQL</li> -->
-                    <li>Oracle Database</li>
+                    <li>Oracle DB</li>
                     <li>IBM DB2</li>
                     <!-- <li>MongoDB</li> -->
                     <!-- <li>SQLite</li> -->
-                    <li>Database Design & Normalization</li>
+                    <li>DB Design-Norm</li>
                 </ul>
             </div>
 
@@ -362,11 +381,10 @@
                 <h3 class="skill-heading">Other Skills</h3>
                 <ul class="skill-list">
                     
-                    <li>Data Transformation & Integration</li>
-                    <li>Report Automation</li>
-                    <li>Problem-Solving</li>
-                    <li>Time Management</li>
-                    <li>Collaboration and Communication</li>
+                    <li>Data Trans & Integr</li>
+                    <li>Report Auto</li>
+                    <li>Prob-Solv</li>
+                    <li>Collab Comm</li>
                 </ul>
             </div>
 
@@ -550,7 +568,6 @@
         </form> -->
 
         <div class="contact-container">
-
             <div class="contact-box">
                 <div class="contact-info">
                     <h4><b>Email</b></h4>
@@ -568,7 +585,6 @@
                     </p>
                 </div>
             </div>
-        
         </div>
         
     </section>
@@ -607,8 +623,9 @@
         </ul> -->
 
         <p class="copyright">
-            Krish Chaudhary | All Rights Reserved - 2024
+            <a href="https://github.com/krish1440" target="_blank">Krish Chaudhary | All Rights Reserved - 2024</a>
         </p>
+        
     </footer>
 
     <script src="script.js"></script>
