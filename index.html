@@ -452,25 +452,32 @@
     max-width: 1200px;
     margin: 0 auto;
     background: #000000;
+    
 }
 
 .experience-container {
     display: grid;
     gap: 20px;
+
+    
 }
 .experience:hover {
-            transform: translateY(-15px);
-        }
+    transform: translateY(-15px);
+    
+}
         
 .experience-item {
-    background: #ffffff;
+    background: white;
+    /* background-color: var(--main-color); */
+    
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgb(164, 33, 33);
-    transition: transform 0.3s ease;
     border-left: 5px solid #3498db;
     min-height: 200px;
+    transition: 0.3s ease-in-out;
     overflow: auto;
+
 }
 
 .experience-title h3 {
