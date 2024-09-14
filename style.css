@@ -243,23 +243,21 @@ span{
 }
 
 @keyframes words{
-    0%,
-    20%{
+    0%, 20% {
         content: "Data Analyst";
     }
-    21%,
-    40%{
+    20.1%, 40% {
         content: "ML Engineer";
     }
-    41%,
-    60%{
+    40.1%, 60% {
         content: "BI Analyst";
     }
-    61%,
-    80%{
+    60.1%, 80% {
         content: "Data Scientist";
     }
-    81%,
+    80.1%, 100% {
+        content: "Data Analyst";
+    }
 }
 
 @keyframes typing{
@@ -407,9 +405,6 @@ span{
     background: var(--bg-color);
     color: rgb(0, 0, 0);
 }
-
-
-
 
 .skills h2{
     margin-bottom: 5rem;
