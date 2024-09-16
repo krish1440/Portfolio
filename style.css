@@ -259,7 +259,6 @@ span{
         content: "Data Analyst";
     }
 }
-
 @keyframes typing{
     10%,
     15%,
@@ -584,7 +583,7 @@ span{
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin: 5rem auto;
+    margin: 2rem auto;
     text-align: center; 
 }
 
@@ -597,24 +596,25 @@ span{
 .contact form .input-box input,
 .contact form textarea{
     width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
+    padding: 1rem;
+    font-size: 1.4rem;
     color: var(--main-color);
     background: var(--bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     resize: none;
 }
 
 .contact form .btn{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 
 
 .contact-container{
     display: grid;
+    place-items: center;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 2.5rem;
@@ -622,7 +622,8 @@ span{
 
 .contact-box{
     background-color: var(--main-color);
-    height: 200px;
+    height: 150px;
+    width: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
